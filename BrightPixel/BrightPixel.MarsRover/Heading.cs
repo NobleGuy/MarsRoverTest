@@ -17,8 +17,9 @@ namespace BrightPixel.MarsRover
         East = 2,
         SouthEast = 3,
         South = 4,
-        West = 5,
-        NorthWest = 6,
-        Max = 6
+        SouthWest = 5,
+        West = 6,
+        NorthWest = 7,
+        Max = 7
     }
 }
