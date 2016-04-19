@@ -13,9 +13,10 @@ namespace BrightPixel.MarsRover
     {
         North = 0,
         Min = 0,
-        East = 1,
-        South = 2,
-        West = 3,
-        Max = 3
+        NorthEast = 1,
+        East = 2,
+        South = 3,
+        West = 4,
+        Max = 4
     }
 }
