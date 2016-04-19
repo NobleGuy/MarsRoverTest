@@ -255,7 +255,7 @@ namespace BrightPixel.MarsRover.Test
 
             Point? currentPosition = rover.CurrentPosition;
             Heading? currentHeading = rover.CurrentHeading;
-            Heading? expectedHeading = Heading.West;
+            Heading? expectedHeading = (Heading)(Heading.Max);
 
             rover.ProcessInstructions("L");
 
@@ -281,7 +281,7 @@ namespace BrightPixel.MarsRover.Test
 
             Point? currentPosition = rover.CurrentPosition;
             Heading? currentHeading = rover.CurrentHeading;
-            Heading? expectedHeading = Heading.East;
+            Heading? expectedHeading = (Heading)(Heading.North +1);
 
             rover.ProcessInstructions("R");
 
@@ -305,8 +305,8 @@ namespace BrightPixel.MarsRover.Test
             Assert.IsNotNull(rover.Plateau);
             Assert.IsTrue(rover.Plateau.UpperRightCoordinates.HasValue);
 
-            Point expectedPosition = new Point(1, 3);
-            Heading? expectedHeading = Heading.North;
+            Point expectedPosition = new Point(0, 0);
+            Heading? expectedHeading = Heading.South;
 
             rover.ProcessInstructions("LMLMLMLMM");
 
@@ -329,8 +329,8 @@ namespace BrightPixel.MarsRover.Test
             Assert.IsNotNull(rover.Plateau);
             Assert.IsTrue(rover.Plateau.UpperRightCoordinates.HasValue);
 
-            Point expectedPosition = new Point(5, 1);
-            Heading? expectedHeading = Heading.East;
+            Point expectedPosition = new Point(4, 2);
+            Heading? expectedHeading = Heading.West;
 
             rover.ProcessInstructions("MMRMMRMRRM");
 
